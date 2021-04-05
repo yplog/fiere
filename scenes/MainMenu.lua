@@ -44,10 +44,12 @@ function MM:update(dt)
 end
 
 function MM:draw()
+    landing = love.graphics.newImage("assets/img/fiere.png")
+    love.graphics.draw(landing)
     self.start_button:draw()
     self.options_button:draw()
     self.exit_button:draw()
-    love.graphics.printf("Main Menu", 0, 25, love.graphics.getWidth(), "center")
+    -- love.graphics.printf("Main Menu", 0, 25, love.graphics.getWidth(), "center")
 end
 
 return MM
