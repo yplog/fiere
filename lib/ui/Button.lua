@@ -11,8 +11,12 @@ local function color(r, g, b, a)
   return colorAdaptation(r, g, b, a)
 end
 
-local function gray(color, alpha)
-	return {level, level, level, alpha or 1}
+local function gray(level, alpha)
+	if alpha then
+		alpha = alpha / 255
+	end
+
+	return {level/255, level/255, level/255, alpha or 1}
 end
 
 local function mouse_in_bounds(self, mx, my)

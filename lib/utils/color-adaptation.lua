@@ -1,3 +1,5 @@
+-- for love 11
+
 function colorAdaptation(r, g, b, a)
   if r then
     r = r / 255
