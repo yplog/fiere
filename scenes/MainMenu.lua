@@ -9,11 +9,11 @@ function MM:new(scene_manager)
     local sh = love.graphics.getHeight()
 
     self.start_button = Button(sw / 4, sh - 100 , 140, 40, "Start")
-    self.start_button:colors({172/255, 50/255, 50/255, 1}, {223/255, 65/255, 38/255, 1}, {200/255, 1, 200/255, 1})
+    self.start_button:colors({172/255, 50/255, 50/255, 1}, {223/255, 65/255, 38/255, 1}, {200/255, 1/255, 200/255, 1})
     self.options_button = Button(sw / 4 + 200, sh - 100 , 140, 40, "Options")
-    self.options_button:colors({172/255, 50/255, 50/255, 1}, {223/255, 65/255, 38/255, 1}, {200/255, 1, 200/255, 1})
+    self.options_button:colors({172/255, 50/255, 50/255, 1}, {223/255, 65/255, 38/255, 1}, {200/255, 1/255, 200/255, 1})
     self.exit_button = Button(sw / 4 + 400, sh - 100, 140, 40, "Exit")
-    self.exit_button:colors({172/255, 50/255, 50/255, 1}, {223/255, 65/255, 38/255, 1}, {200/255, 1, 200/255, 1})
+    self.exit_button:colors({172/255, 50/255, 50/255, 1}, {223/255, 65/255, 38/255, 1}, {200/255, 1/255, 200/255, 1})
     self.click = function(btn) self:on_click(btn) end
 end
 

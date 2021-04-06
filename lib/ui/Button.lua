@@ -16,7 +16,9 @@ local function gray(level, alpha)
 		alpha = alpha / 255
 	end
 
-	return {level/255, level/255, level/255, alpha or 1}
+	code = level / 255
+
+	return {code, code, code, alpha or 1}
 end
 
 local function mouse_in_bounds(self, mx, my)
@@ -59,10 +61,11 @@ function Button:colors(normal, highlight, pressed, disabled)
 	assert(type(highlight) == "table", "highlight parameter must be a table!")
 	assert(type(pressed) == "table", "pressed parameter must be a table!")
 	--assert(type(disabled) == "table", "disabled parameter must be a table!")
+
 	self.normal = normal
 	self.highlight = highlight
 	self.pressed = pressed
-	self.disabled = disabled or self.disabled
+	--self.disabled = disabled or self.disabled
 end
 
 function Button:left(x)
@@ -107,6 +110,7 @@ end
 function Button:draw()
 	local r, g, b, a = love.graphics.getColor()
 	love.graphics.setColor(self.color)
+	--print(self.color[r], self.color[g], self.color[b])
 	love.graphics.rectangle("fill", self.pos.x - self.w / 2, self.pos.y - self.h / 2, self.w, self.h, 4, 4)
 	
 	local f = love.graphics.getFont()
