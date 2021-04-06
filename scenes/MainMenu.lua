@@ -40,7 +40,7 @@ end
 function MM:update(dt)
     self.start_button:update(dt)
     self.options_button:update(dt)
-    self.exit_button :update(dt)
+    self.exit_button:update(dt)
 end
 
 function MM:draw()
@@ -49,7 +49,7 @@ function MM:draw()
     self.start_button:draw()
     self.options_button:draw()
     self.exit_button:draw()
-    -- love.graphics.printf("Main Menu", 0, 25, love.graphics.getWidth(), "center")
+    love.graphics.printf("Main Menu", 0, 25, love.graphics.getWidth(), "center")
 end
 
 return MM

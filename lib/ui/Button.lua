@@ -1,10 +1,14 @@
+require("lib.utils.color-adaptation")
+
 local Class = require("lib.Class")
 local Vector2 = require("lib.Vector2")
 
 local Button = Class:derive("Button")
 
 local function color(r, g, b, a)
-  return {r, g or r, b or r, a or 1}
+	colorAdaptation(r, g, b, a)
+
+  return colorAdaptation(r, g, b, a)
 end
 
 local function gray(color, alpha)
